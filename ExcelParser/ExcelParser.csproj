@@ -6,4 +6,26 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="18764668.eps" />
+    <None Remove="65.png" />
+    <None Remove="image_2021-02-15_12-48-57.png" />
+    <None Remove="image_2021-03-03_16-46-58.png" />
+    <None Remove="IMG_20210310_211455.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Odyssey">
+      <HintPath>..\..\..\..\Downloads\Odyssey.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="18764668.eps" />
+    <Resource Include="65.png" />
+    <Resource Include="image_2021-02-15_12-48-57.png" />
+    <Resource Include="image_2021-03-03_16-46-58.png" />
+    <Resource Include="IMG_20210310_211455.jpg" />
+  </ItemGroup>
+
 </Project>

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Odyssey;
 
 namespace ExcelParser
 {
@@ -23,6 +24,30 @@ namespace ExcelParser
         public MainWindow()
         {
             InitializeComponent();
+             ss = false;
         }
+
+        private bool ss;
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        
+
+        private void Ok_Click(object sender, RoutedEventArgs e)
+        {
+            
+            if (ss)
+            {
+                ss = false;
+            }
+            else
+            {
+                ss = true;
+            }
+           // Ok1.IsChecked = ss;
+        }
+
+       
     }
 }

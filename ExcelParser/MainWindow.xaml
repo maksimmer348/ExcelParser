@@ -5,8 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExcelParser"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+        Title="Kalkulate" Height="350" Width="500">
+    <!--название и размеры окна-->
+    
+    <Grid x:Name="MainRoot" Background="White">
+        <!--grid здесь это основноая сетка, x:Name="" тут мы указываем название 
+        через которое сможем в дальейшем обращатся к этому элеменрту и вытащит 
+        из него все конпки и тд, Background отвечает за цвет фона-->
+        <Grid.RowDefinitions><!--создаем конструктор рядов -->
+            <RowDefinition /><!--создаем 5 рядов -->
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions><!--создаем конструктор столбцов -->
+            <ColumnDefinition/><!--создаем 5 стлбцов -->
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Hello" Margin="0,0,0,67" Grid.RowSpan="2"/>
+        <!--создаем тектовое поле в полях Grid.Row="0" Grid.Column="0"отвечает за адрес в ряде и в столбце соответсвенно 
+        те верхний правый,   -->
     </Grid>
 </Window>
