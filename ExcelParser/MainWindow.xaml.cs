@@ -12,42 +12,50 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Odyssey;
+
 
 namespace ExcelParser
 {
+    
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        private Dictionary<string, object> Elements = new Dictionary<string, object>();
         public MainWindow()
         {
             InitializeComponent();
-             ss = false;
+            foreach (UIElement elem in MainRoot.Children)//через UIElement мы перебираем все обьекты
+                //которые находятся в нашей сетке MainRoot.Children обьекты оотносящиеся
+                //к нашему Grid x:Name="MainRoot"
+            {
+                if (elem is Button)//теперь нужно прверить относится ли дочерний обьект к классу Button
+                {
+                    ((Button) elem).Click += Button_Click;//тк Button это производный класс от класса 
+                    //UIElement необходимо произвести явное приведение (downcast), да
+                }
+            }
         }
 
-        private bool ss;
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-        
-
-        private void Ok_Click(object sender, RoutedEventArgs e)
-        {
-            
-            if (ss)
+            string str = ((Button) e.OriginalSource).Content.ToString();//
+           
+            if (str == "AC")
             {
-                ss = false;
+                textLabel.Text = String.Empty;
+            }
+            else if (str == "=")
+            {
+                
             }
             else
             {
-                ss = true;
+                textLabel.Text += str;
             }
-           // Ok1.IsChecked = ss;
-        }
 
-       
+        }
     }
 }

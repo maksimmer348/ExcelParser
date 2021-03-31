@@ -7,48 +7,50 @@
         mc:Ignorable="d"
         Title="Kalkulate" Height="350" Width="500">
     <!--название и размеры окна-->
-    
+
     <Grid x:Name="MainRoot" Background="White">
         <!--grid здесь это основноая сетка, x:Name="" тут мы указываем название 
         через которое сможем в дальейшем обращатся к этому элеменрту и вытащит 
         из него все конпки и тд, Background отвечает за цвет фона-->
-        <Grid.RowDefinitions><!--создаем конструктор рядов -->
-            <RowDefinition /><!--создаем 5 рядов -->
+        <Grid.RowDefinitions>
+            <!--создаем конструктор рядов -->
+            <RowDefinition />
+            <!--создаем 5 рядов -->
             <RowDefinition />
             <RowDefinition />
             <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions><!--создаем конструктор столбцов -->
-            <ColumnDefinition/><!--создаем 5 стлбцов -->
+        <Grid.ColumnDefinitions>
+            <!--создаем конструктор столбцов -->
+            <ColumnDefinition/>
+            <!--создаем 5 стлбцов -->
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
-            
+
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Row="0" Grid.Column="0" Text="Hello" Grid.ColumnSpan="4" x:Name="textLabel"/>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Text" Grid.ColumnSpan="4" x:Name="textLabel" FontSize="48" FontFamily="Arial" Background="#FF999999" TextAlignment="Left" FontStretch="Normal" FontStyle="Normal" FontWeight="Normal" TextWrapping="NoWrap"/>
         <!--создаем тектовое поле в полях Grid.Row="0" Grid.Column="0" те в  адрес в ряде и в столбце соответсвенно 
         те верхний правый, Grid.ColumnSpan="4 обьединяем 4 столбца(Grid.RowSpan="4" так бы мы обьеденили 4 ряда)-->
-        <Button Grid.Column="0" Grid.Row="1" >1</Button>
-        <!-- 1 это текст кнопки который будет отображатсня на ней, Grid.Column="0" Grid.Row="1" как уже показано 
+        <Button x:Name="button1" Grid.Column="0" Grid.Row="1" Background="#FF191B17" Foreground="White" FontSize="16" FontFamily="Arial" >1</Button>
+        <!--Background="#FF191B17" цвет кнопки, Foreground цвет текста, 1 это текст кнопки который будет отображатсня на ней, Grid.Column="0" Grid.Row="1" как уже показано 
         -->
-        <Button Grid.Column="1" Grid.Row="1" >2</Button>
-        <Button Grid.Column="2" Grid.Row="1" >3</Button>
-        <Button Grid.Column="0" Grid.Row="2" >4</Button>
-        <Button Grid.Column="1" Grid.Row="2" >5</Button>
-        <Button Grid.Column="2" Grid.Row="2" >6</Button>
-        <Button Grid.Column="0" Grid.Row="3" >7</Button>
-        <Button Grid.Column="1" Grid.Row="3" >8</Button>
-        <Button Grid.Column="2" Grid.Row="3" >9</Button>
-        <Button Grid.Column="0" Grid.Row="4" >0</Button>
+        <Button x:Name="button2" Grid.Column="1" Grid.Row="1" Background="#FF191B17" FontSize="16" FontFamily="Arial" Foreground="White">2</Button>
+        <Button x:Name="button3" Grid.Column="2" Grid.Row="1" Background="#FF191B17" FontSize="16" FontFamily="Arial" Foreground="White">3</Button>
+        <Button x:Name="button4" Grid.Column="0" Grid.Row="2" Background="#FF191B17" FontSize="16" FontFamily="Arial" Foreground="White">4</Button>
+        <Button x:Name="button5" Grid.Column="1" Grid.Row="2" Background="#FF191B17" FontSize="16" FontFamily="Arial" Foreground="White">5</Button>
+        <Button x:Name="button6" Grid.Column="2" Grid.Row="2" Background="#FF191B17" FontSize="16" FontFamily="Arial" Foreground="White">6</Button>
+        <Button x:Name="button7" Grid.Column="0" Grid.Row="3" Background="#FF191B17" FontSize="16" FontFamily="Arial" Foreground="White">7</Button>
+        <Button x:Name="button8" Grid.Column="1" Grid.Row="3" Background="#FF191B17" FontSize="16" FontFamily="Arial" Foreground="White">8</Button>
+        <Button x:Name="button9" Grid.Column="2" Grid.Row="3" Background="#FF191B17" FontSize="16" FontFamily="Arial" Foreground="White">9</Button>
+        <Button x:Name="button0" Grid.Column="0" Grid.Row="4" Background="#FF191B17" FontSize="16" FontFamily="Arial" Foreground="White">0</Button>
 
-        <Button Grid.Column="4" Grid.Row="1" >+</Button>
-        <Button Grid.Column="4" Grid.Row="2" >-</Button>
-        <Button Grid.Column="4" Grid.Row="3" >*</Button>
-        <Button Grid.Column="4" Grid.Row="4" >/</Button>
-        <Button Grid.Column="1" Grid.Row="4" >=</Button>
-        <Button Grid.Column="2" Grid.Row="4" >AC</Button>
-
-
+        <Button x:Name="buttonAdd" Grid.Column="4" Grid.Row="1" Background="#FF464646" FontSize="16" FontFamily="Arial" Foreground="White">+</Button>
+        <Button x:Name="buttonSubtraction" Grid.Column="4" Grid.Row="2" Background="#FF464646" FontSize="16" FontFamily="Arial" Foreground="White">-</Button>
+        <Button x:Name="buttonMultiply" Grid.Column="4" Grid.Row="3" Background="#FF464646" FontSize="16" FontFamily="Arial" Foreground="White">*</Button>
+        <Button x:Name="buttonDivide" Grid.Column="4" Grid.Row="4" Background="#FF464646" FontSize="16" FontFamily="Arial" Foreground="White">/</Button>
+        <Button x:Name="buttonEqually" Grid.Column="1" Grid.Row="4" Background="#FF464646" FontSize="16" FontFamily="Arial" Foreground="White" >=</Button>
+        <Button x:Name="buttonAC" Grid.Column="2" Grid.Row="4" Background="#FF464646" FontSize="16" FontFamily="Arial" Foreground="White">AC</Button>
     </Grid>
 </Window>
