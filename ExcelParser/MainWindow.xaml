@@ -24,13 +24,13 @@
         <Grid.ColumnDefinitions>
             <!--создаем конструктор столбцов -->
             <ColumnDefinition/>
-            <!--создаем 5 стлбцов -->
+            <!--создаем 4 стлбцов -->
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
 
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Row="0" Grid.Column="0" Text="Text" Grid.ColumnSpan="4" x:Name="textLabel" FontSize="48" FontFamily="Arial" Background="#FF999999" TextAlignment="Left" FontStretch="Normal" FontStyle="Normal" FontWeight="Normal" TextWrapping="NoWrap"/>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="" Grid.ColumnSpan="4" x:Name="textLabel" FontSize="48" FontFamily="Arial" Background="#FF999999" TextAlignment="Left" FontStretch="Normal" FontStyle="Normal" FontWeight="Normal" TextWrapping="NoWrap"/>
         <!--создаем тектовое поле в полях Grid.Row="0" Grid.Column="0" те в  адрес в ряде и в столбце соответсвенно 
         те верхний правый, Grid.ColumnSpan="4 обьединяем 4 столбца(Grid.RowSpan="4" так бы мы обьеденили 4 ряда)-->
         <Button x:Name="button1" Grid.Column="0" Grid.Row="1" Background="#FF191B17" Foreground="White" FontSize="16" FontFamily="Arial" >1</Button>
