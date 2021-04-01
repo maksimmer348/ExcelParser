@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MaterialDesignThemes" Version="4.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="Odyssey">
       <HintPath>..\..\..\..\Downloads\Odyssey.dll</HintPath>
     </Reference>
