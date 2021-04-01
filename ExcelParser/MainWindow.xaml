@@ -24,15 +24,15 @@
                     <!-- эта записьь аналогична верхней (запись в Conttent аналогичен записи внутри тела обьектта)
                     <Button HorizontalAlignment ="Left">Registration</Button>-->
 
-                    <Button HorizontalAlignment="Right" Content="Sign in" Style="{StaticResource MaterialDesignFlatButton}"/>
+                    <Button x:Name="SignInTextBox" HorizontalAlignment="Right" Content="Sign in" Style="{StaticResource MaterialDesignFlatButton}"/>
                     <!--Style позволяет подключить внешшние стили, через StaticResource MaterialDesignFlatButton-->
                 </Grid>
-                <TextBox materialDesign:HintAssist.Hint="Enter login" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/><!--создание текстбокса с внешним материаал стилем-->
-                <PasswordBox materialDesign:HintAssist.Hint="Enter password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
-                <PasswordBox materialDesign:HintAssist.Hint="Repeat password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/><!--создание специплного текстбокса 
+                <TextBox x:Name ="LoginTextBox"  materialDesign:HintAssist.Hint="Enter login" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/><!--создание текстбокса с внешним материаал стилем-->
+                <PasswordBox x:Name="passTextBox" materialDesign:HintAssist.Hint="Enter password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
+                <PasswordBox x:Name="passRepeatTextBox" materialDesign:HintAssist.Hint="Repeat password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/><!--создание специплного текстбокса 
             для паролейт с внешним материаал стилем-->
-                <TextBox materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/><!--создание текстбокса с внешним материаал стилем-->
-                <Button Content="Registration" Margin="10"></Button>
+                <TextBox x:Name="EmailTextBox" materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/><!--создание текстбокса с внешним материаал стилем-->
+                <Button x:Name="RegistrationButton" Content="Registration" Margin="10" Click="Button_Reg_Click"></Button>
 </StackPanel>
         </Border>
         
