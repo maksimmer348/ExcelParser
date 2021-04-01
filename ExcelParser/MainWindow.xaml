@@ -27,7 +27,7 @@
                     <Button x:Name="SignInTextBox" HorizontalAlignment="Right" Content="Sign in" Style="{StaticResource MaterialDesignFlatButton}"/>
                     <!--Style позволяет подключить внешшние стили, через StaticResource MaterialDesignFlatButton-->
                 </Grid>
-                <TextBox x:Name ="LoginTextBox"  materialDesign:HintAssist.Hint="Enter login" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/><!--создание текстбокса с внешним материаал стилем-->
+                <TextBox x:Name ="loginTextBox"  materialDesign:HintAssist.Hint="Enter login" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/><!--создание текстбокса с внешним материаал стилем-->
                 <PasswordBox x:Name="passTextBox" materialDesign:HintAssist.Hint="Enter password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
                 <PasswordBox x:Name="passRepeatTextBox" materialDesign:HintAssist.Hint="Repeat password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/><!--создание специплного текстбокса 
             для паролейт с внешним материаал стилем-->
