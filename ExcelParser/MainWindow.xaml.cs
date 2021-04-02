@@ -29,8 +29,6 @@ namespace ExcelParser
         public MainWindow()
         {
             InitializeComponent();
-           
-
         }
 
         private void Button_Reg_Click(object sender, RoutedEventArgs e)
@@ -40,8 +38,15 @@ namespace ExcelParser
             string passRepeat = passRepeatTextBox.Password.Trim();
             string email = EmailTextBox.Text.ToLower().Trim();
 
-            loginTextBox.ToolTip = null;
-            loginTextBox.Background = Brushes.Transparent;
+            var syste = (11, 20, "40");
+            var (name, age) = ("Tom", 10);
+            Debug.WriteLine($"{syste.Item1} {syste.Item2 } {syste.Item3}");
+            Debug.WriteLine($"{name} {age}");
+
+
+
+            loginTextBox.ToolTip = null;//текст вспылвающей подсказки при наведении на текстбокс
+            loginTextBox.Background = Brushes.Transparent;//делаем текст текстбокса прозрачным
             passTextBox.ToolTip = null;
             passTextBox.Background = Brushes.Transparent;
             passRepeatTextBox.ToolTip = null;
@@ -69,7 +74,6 @@ namespace ExcelParser
                 EmailTextBox.ToolTip = "Неверно введен емейл";
                 EmailTextBox.Background = Brushes.DarkRed;
             }
-           Debug.Write("Kus");
         }
     }
 }

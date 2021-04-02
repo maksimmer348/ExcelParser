@@ -32,8 +32,8 @@
                 <PasswordBox x:Name="passRepeatTextBox" materialDesign:HintAssist.Hint="Repeat password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/><!--создание специплного текстбокса 
             для паролейт с внешним материаал стилем-->
                 <TextBox x:Name="EmailTextBox" materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/><!--создание текстбокса с внешним материаал стилем-->
-                <Button x:Name="RegistrationButton" Content="Registration" Margin="10" Click="Button_Reg_Click"></Button>
-</StackPanel>
+                <Button x:Name="RegistrationButton" Content="Registration" Margin="10" Click="Button_Reg_Click"></Button><!--добавляем ивент здесь-->
+            </StackPanel>
         </Border>
         
     </Grid>
