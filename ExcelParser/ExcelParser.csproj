@@ -9,12 +9,13 @@
 
   <ItemGroup>
     <PackageReference Include="MaterialDesignThemes" Version="4.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.4" />
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="Odyssey">
-      <HintPath>..\..\..\..\Downloads\Odyssey.dll</HintPath>
-    </Reference>
+    <None Update="Users.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

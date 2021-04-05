@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,12 +25,12 @@ namespace ExcelParser
     /// </summary>
     public partial class MainWindow : Window
     {
-
-
+        private ApplicationContext db;
         public MainWindow()
         {
             InitializeComponent();
-           
+
+            db = new ApplicationContext();
 
         }
 
@@ -69,7 +70,35 @@ namespace ExcelParser
                 EmailTextBox.ToolTip = "Неверно введен емейл";
                 EmailTextBox.Background = Brushes.DarkRed;
             }
-           Debug.Write("Kus");
+                db.Add(new User(login, pass, email) );
+                db.SaveChanges();
+        }
+
+
+        private void Delete_account(object sender, RoutedEventArgs e)
+        {
+            var users = db.Users.OrderBy(b => b.id).First();
+            db.Remove(users);
+            db.SaveChanges();
+        }
+
+        private void View_accounts_Click(object sender, RoutedEventArgs e)
+        {
+            var users = db.Users.OrderBy(b => b.id);
+            foreach (var user in users)
+            {
+                Debug.WriteLine($"{user.id} {user.login} {user.password} {user.email}");
+            }
+            db.SaveChanges();
+        }
+
+        
+        private void Update_Account_Click(object sender, RoutedEventArgs e)
+        {
+            var users = db.Users.OrderBy(b => b.id).ToList();
+            users[0].email = "KEKE@ya.ru";
+            users[0].login = "KESHAS";
+            db.SaveChanges();
         }
     }
 }
