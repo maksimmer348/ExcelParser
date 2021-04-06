@@ -16,6 +16,7 @@ using System.Windows.Shapes;
 using System.Data;
 using System.Diagnostics;
 using System.Printing;
+using Microsoft.EntityFrameworkCore.Migrations.Operations;
 
 namespace ExcelParser
 {

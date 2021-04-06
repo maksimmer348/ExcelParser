@@ -6,6 +6,6 @@ namespace ExcelParser
     {
         public DbSet<User> Users { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
-            => options.UseSqlite(@"Data Source=C:\Users\specadmin\source\repos\ExcelParser\ExcelParser\Users.db");
+            => options.UseSqlite("Data Source=Users.db");
     }
 }
